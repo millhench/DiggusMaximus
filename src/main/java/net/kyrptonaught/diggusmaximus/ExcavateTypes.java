@@ -32,6 +32,8 @@ public class ExcavateTypes {
                 return ExcavateTypes.threebythree(startPos, curPos, facing);
             case THREExTHREE_TUNNEL:
                 return ExcavateTypes.threebythreeTunnel(startPos, curPos, facing);
+            case ONExFIVE:
+                return ExcavateTypes.onebyfive(startPos, curPos);
         }
         return ExcavateTypes.standard;
     }
@@ -122,6 +124,16 @@ public class ExcavateTypes {
         if (startPos.getY() == curPos.getY()) {
             cube.add(new BlockPos(0, -1, 0));
         }
+        return cube;
+    }
+
+    public static List<BlockPos> onebyfive(BlockPos startPos, BlockPos curPos) {
+        List<BlockPos> cube = new ArrayList<>();
+        if (startPos.getY() == curPos.getY())
+            cube.add(new BlockPos(0, -1, 0));
+            cube.add(new BlockPos(0, -2, 0));
+            cube.add(new BlockPos(0, -3, 0));
+            cube.add(new BlockPos(0, -4, 0));
         return cube;
     }
 
