@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class ExcavateTypes {
     public enum shape {
         HORIZONTAL_LAYER, LAYER, HOLE, ONExTWO, ONExTWO_TUNNEL,
-        THREExTHREE, THREExTHREE_TUNNEL
+        THREExTHREE, THREExTHREE_TUNNEL, ONExFIVE
     }
 
     public static List<BlockPos> getSpreadType(int shapeSelection, Direction facing, BlockPos startPos, BlockPos curPos) {
